@@ -18,56 +18,7 @@ public class Calculator {
             System.out.println("ArithmeticException => " + e.getMessage());
         }
     }
-
-
-
-
-
-
-    ////////////
-   /* public void sum(){
-        double numA = askForA();
-        double numB = askForB();
-        BasicCalculation s = (double a , double b) -> a + b;
-        double result = s.calculation(numA, numB);
-        System.out.printf("The result of the sum is: %.2f",result);
-    }
-
-    public void subtract(){
-        double numA = askForA();
-        double numB = askForB();
-        Subtract s = (double a, double b) -> a - b;
-        double result = s.subtracting(numA, numB);
-        System.out.printf("The result of the subtraction is: %.2f",result);
-    }
-
-    public void multiply(){
-        double numA = askForA();
-        double numB = askForB();
-        Multiply s = (double a, double b) -> a * b;
-        double result = s.multiplying(numA, numB);
-        System.out.printf("The result of the multiplication is: %.2f",result);
-    }
-
-    public void divide() {
-        boolean flag = true;
-        double numA;
-        double numB;
-        do {
-            numA = askForA();
-            numB = askForB();
-            if (numB != 0) {
-                flag = false;
-            }
-            else{
-                System.out.println("Cannot divide Numbers/Zero...");
-            }
-        } while (flag);
-        Divide s = (double a, double b) -> a / b;
-        double result = s.dividing(numA, numB);
-        System.out.printf("The result of the division is: %.2f",result);
-    }*/
-
+    
     public void showCalculatorMenu(){
         System.out.println("Please choose an option.");
         System.out.println("1.- Sum(a + b)");
