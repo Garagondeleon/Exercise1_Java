@@ -1,5 +1,8 @@
-import java.util.*;
-import java.util.stream.Collectors;
+package service;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
 
 public class StudentsGradings {
 

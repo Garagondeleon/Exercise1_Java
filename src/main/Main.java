@@ -1,4 +1,7 @@
+package main;
+
 import java.util.Scanner;
+import service.*;
 
 public class Main {
 
@@ -19,19 +22,23 @@ public class Main {
                         switch(calcOption){
                             case 1:
                                 System.out.println("--Sum--");
-                                calc.sum();
+                                BasicCalculation bcSum = (double a , double b) -> a + b;
+                                calc.basicCalc(bcSum);
                                 break;
                             case 2:
                                 System.out.println("--Subtract--");
-                                calc.subtract();
+                                BasicCalculation bcSub = (double a , double b) -> a - b;
+                                calc.basicCalc(bcSub);
                                 break;
                             case 3:
                                 System.out.println("--Multiply--");
-                                calc.multiply();
+                                BasicCalculation bcMulti = (double a , double b) -> a * b;
+                                calc.basicCalc(bcMulti);
                                 break;
                             case 4:
                                 System.out.println("--Divide--");
-                                calc.divide();
+                                BasicCalculation bcDiv = (double a , double b) -> a / b;
+                                calc.basicCalc(bcDiv);
                                 break;
                             case 5:
                                 flagCalc = false;

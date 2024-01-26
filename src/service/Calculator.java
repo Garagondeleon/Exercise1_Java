@@ -1,12 +1,35 @@
+package service;
 import java.util.Scanner;
 
 public class Calculator {
     static Scanner scanner = new Scanner(System.in);
-    public void sum(){
+
+    public void basicCalc(BasicCalculation bc){  //Sole method for all operations
+        try{
+            double numA = askForA();
+            double numB = askForB();
+            double result = bc.calculation(numA, numB);
+            if(result == Double.POSITIVE_INFINITY || result == Double.NEGATIVE_INFINITY){
+                System.out.println("Cannot divide number / zero...");
+            }else{
+                System.out.printf("The result of the operation is: %.2f%n",result);
+            }
+        }catch (ArithmeticException e) {
+            System.out.println("ArithmeticException => " + e.getMessage());
+        }
+    }
+
+
+
+
+
+
+    ////////////
+   /* public void sum(){
         double numA = askForA();
         double numB = askForB();
-        Sum s = (double a , double b) -> a + b;
-        double result = s.summing(numA, numB);
+        BasicCalculation s = (double a , double b) -> a + b;
+        double result = s.calculation(numA, numB);
         System.out.printf("The result of the sum is: %.2f",result);
     }
 
@@ -43,7 +66,7 @@ public class Calculator {
         Divide s = (double a, double b) -> a / b;
         double result = s.dividing(numA, numB);
         System.out.printf("The result of the division is: %.2f",result);
-    }
+    }*/
 
     public void showCalculatorMenu(){
         System.out.println("Please choose an option.");
